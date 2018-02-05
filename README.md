@@ -17,12 +17,12 @@ magic-cards/
     /modules/
       index.js
       lister.js
-    App.css
+    App.scss
     App.js
     App.test.js
-    Card.css
+    Card.scss
     Card.js
-    index.css
+    index.scss
     index.js
     logo.svg
     registerServiceWorker.js
