@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
+import uuidv5 from 'uuid/v5';
 import './Card.css';
+
+const NAME_SPACE = uuidv5('react.magic.cards', uuidv5.DNS);
 
 const Card = ({ card }) => card ? (
   <div className="card">
@@ -52,7 +55,7 @@ const Card = ({ card }) => card ? (
         return (
           <div className="card__details__content">
             {card.printings.map((printing, index) => (
-              <div key={index}>{printing}</div>
+              <div key={uuidv5(''+ index, NAME_SPACE)}>{printing}</div>
             ))}
           </div>
         );
