@@ -8,7 +8,7 @@ const NAME_SPACE = uuidv5('react.magic.cards', uuidv5.DNS);
 const Card = ({ card }) => card ? (
   <div className="card">
     <div className="card__preview">
-      <h2 className="card__preview_title">{card.name}</h2>
+      <h2 className="card__preview__title">{card.name}</h2>
       <img src={card.imageUrl} alt={card.imageUrl}/>
     </div>
     <div className="card__details">

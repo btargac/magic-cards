@@ -1,0 +1,84 @@
+.cards-list__card {
+  background: #222;
+  display: inline-block;
+  width: 300px;
+  height: auto;
+  margin: 5px;
+  padding: 5px;
+
+  &__title {
+    color: #fff;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card-holder {
+  text-align: center;
+}
+
+.card {
+  background-color: #aaa;
+  display: inline-block;
+  padding: 5px;
+  height: 410px;
+  text-align: left;
+  overflow: hidden;
+  width: 600px;
+
+  &__preview, &__details {
+    height: 100%;
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  &__preview {
+    background: #222;
+    float: left;
+    width: 280px;
+    text-align: center;
+
+    &__title {
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
+
+.card__details {
+  background: #333;
+  width: auto;
+  overflow: hidden;
+
+  &__tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__content {
+    color: #fff;
+    padding: 10px;
+  }
+}
+
+.tab {
+  background: #444;
+  display: inline-block;
+  padding: 10px;
+  margin: 0;
+
+  &--active {
+    background: none;
+  }
+
+  &__link, &__link:visited {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
