@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route, Redirect } from 'react-router-dom';
+import uuidv5 from 'uuid/v5';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setSize } from './modules/lister';
@@ -21,9 +22,11 @@ class App extends Component {
 
     const { cards, size } = this.props;
 
+    const NAME_SPACE = uuidv5('react.magic.cards', uuidv5.DNS);
+
     const cardsDom = cards ? (
       cards.map((card, index) =>
-        <Link key={index} to={`/cards/${card.id}/basic`} className="cards-list__card">
+        <Link key={uuidv5(''+ index, NAME_SPACE)} to={`/cards/${card.id}/basic`} className="cards-list__card">
           <h3 className="cards-list__card__title">{card.name}</h3>
           <img className="cards-list__card__image" src={card.imageUrl} alt={card.name}/>
         </Link>
@@ -58,7 +61,7 @@ class App extends Component {
               <div className="options-holder">
                 Show
                 <select className="options-holder__select" onChange={this.changeList} value={size}>
-                  { listingOptions.map((option, index) => <option key={index} value={option}>{option}</option>) }
+                  { listingOptions.map((option, index) => <option key={uuidv5(''+ index, NAME_SPACE)} value={option}>{option}</option>) }
                 </select> items
               </div>
               {cardsDom}
